@@ -1,6 +1,24 @@
 {% extends "base.html" %} {% load static %} {% block content %}
+<link rel="stylesheet" href="../static/css/style.css" />
 
-<h1>Welcome to Kacchi Bon app page</h1>
-<img src="{% static 'images/kacchi-bon-1.jpg'%}" alt="" />
+<h1 class="header-title">Kacchi Bon App Page</h1>
+
+<div class="row row-cols-1 row-cols-md-3 g-4 mx-4 my-2">
+  {% for i in categories %}
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{i.strCategoryThumb}}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title text-center">{{i.strCategory}}</h5>
+        <p class="card-text">{{ i.strCategoryDescription|truncatewords:15 }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="static-image">
+  <img class="kacchi" src="{% static 'images/kacchi-bon-1.jpg'%}" alt="" />
+</div>
 
 {% endblock%}
