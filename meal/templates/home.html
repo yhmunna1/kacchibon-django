@@ -9,8 +9,10 @@
     <div class="card h-100">
       <img src="{{i.strCategoryThumb}}" class="card-img-top" alt="..." />
       <div class="card-body">
-        <h5 class="card-title text-center">{{i.strCategory}}</h5>
-        <p class="card-text">{{ i.strCategoryDescription|truncatewords:15 }}</p>
+        <h5 class="card-title text-center">
+          {{i.idCategory}} {{i.strCategory}}
+        </h5>
+        <p class="card-text">{{ i.strCategoryDescription|truncatewords:10 }}</p>
       </div>
     </div>
   </div>

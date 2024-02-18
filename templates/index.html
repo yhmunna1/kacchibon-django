@@ -1,14 +1,28 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 <link rel="stylesheet" href="../static/css/style.css" />
 
-<h1 class="header-title">Welcome to Kacchi Bon</h1>
-
-<div class="static-image">
-  <img
-    class="kacchi"
-    src="{% static '../static/images/mutton-biriyani-recipe.jpeg'%}"
-    alt=""
-  />
+<div class="container-fluid px-5">
+  <div class="row d-flex align-items-center">
+    <div class="col-lg-6">
+      <div class="hero-text">
+        <h1>Welcome to Kacchi Bon</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem id
+          inventore laborum cupiditate! Aspernatur, qui?
+        </p>
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="hero-image">
+        <img
+          src="{% static '../static/images/mutton-biriyani-recipe.jpeg'%}"
+          class="img-fluid"
+          alt="Hero Image"
+        />
+      </div>
+    </div>
+  </div>
 </div>
 
 {% endblock%}
